@@ -16,7 +16,7 @@ class CreateTravelsTable extends Migration
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
             $table->string("code_travel", 20)->unique();
-            $table->string("destination", 50);
+            $table->string("destination", 60);
             $table->string("means_of_transport", 20);
             $table->date("departure_date");
             $table->date("returne_date");
