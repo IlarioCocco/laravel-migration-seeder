@@ -14,15 +14,14 @@ class TravelsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for ( $i = 0; $i < 100; $i++ ) {
-
             $newTravel = new Travel();
-            $newTravel->code_travel = $faker->ean8();
+            $newTravel->code_travel = $faker->lexify('id-????');
             $newTravel->destination = $faker->state();
             $newTravel->means_of_transport = $faker->company();
             $newTravel->departure_date = $faker->dateTime();
             $newTravel->returne_date = $faker->dateTime();
             $newTravel->number_passenger = $faker->randomDigit(1,9);
-            $newTravel->guide = $faker->text();
+            $newTravel->guide = $faker->text(18);
             $newTravel->price = $faker->randomFloat(2,1000,100000);
             $newTravel->save();
         }

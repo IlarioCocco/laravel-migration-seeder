@@ -17,7 +17,7 @@ class CreateTravelsTable extends Migration
             $table->id();
             $table->string("code_travel", 10)->unique();
             $table->string("destination", 40);
-            $table->string("means_of_transport", 20);
+            $table->string("means_of_transport", 50);
             $table->date("departure_date");
             $table->date("returne_date");
             $table->tinyInteger("number_passenger");
